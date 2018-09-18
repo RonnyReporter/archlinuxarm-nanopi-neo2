@@ -52,6 +52,7 @@ $(UBOOT_SCRIPT): boot.txt
 	mkimage -A arm64 -O linux -T script -C none -n "U-Boot boot script" -d $< $@
 boot.txt:
 	$(WGET) https://raw.githubusercontent.com/archlinuxarm/PKGBUILDs/master/alarm/uboot-pine64/$@
+	sed -i "s/sun50i.*/sun50i-h5-nanopi-neo2.dtb/" $@
 
 serial:
 	$(MINITERM) --raw --eol=lf $(SERIAL_DEVICE) 115200
