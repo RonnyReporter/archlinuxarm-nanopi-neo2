@@ -27,6 +27,9 @@ Here is a simple way to get one:
     make
     ./ct-ng aarch64-unknown-linux-gnu
     ./ct-ng build
+    ./ct-ng build install
+    
+This will install in ~/x-tools, make sure you have the `bin` directory in your path, see below.
 
 
 Preparing the files
