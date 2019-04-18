@@ -41,10 +41,12 @@ This will provide:
 - a boot script (`boot.scr`) to be copied in `/boot`
 
 
-Installing the distribution
-===========================
+Building and installing the distribution
+========================================
 
-Run `make install BLOCK_DEVICE=/dev/mmcblk0` with the appropriate value for
+Run `PATH=$PATH:/home/your-home-directory/x-tools/aarch64-unknown-linux-gnu/bin make` to build, be sure to edit your-home-directory.
+
+Then run `make install BLOCK_DEVICE=/dev/mmcblk0` with the appropriate value for
 `BLOCK_DEVICE`.
 
 This is running commands similar to [any other AllWinner ArchLinuxARM
@@ -52,16 +54,16 @@ installation][alarm-allwinner].
 
 [alarm-allwinner]: https://archlinuxarm.org/platforms/armv7/allwinner/.
 
-Ethernet
-========
+After first boot
+===============
 
-In order to get ethernet working, you will need a recent kernel (>= 4.13).  At
-the time I'm writing these lines, the latest stable is 4.12. Though, you can
-grab the [kernel RC package from ArchLinux ARM][linux-rc] and install it from
-the serial interface.
+After the first boot please run the follow commands, make sure you're connected to a network:
 
-[linux-rc]: https://archlinuxarm.org/packages/aarch64/linux-aarch64-rc
-
+```
+pacman-key --init
+pacman-key --populate archlinuxarm
+pacman -Syu
+```
 
 Goodies
 =======
@@ -73,4 +75,5 @@ If you have a serial cable and `miniterm.py` installed (`python-pyserial`),
 TODO
 ====
 
+- clarify crosstool-ng process
 - upstream to ArchLinuxARM

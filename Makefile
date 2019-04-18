@@ -1,7 +1,7 @@
 SERIAL_DEVICE = /dev/ttyUSB0
 WGET = wget
 MINITERM = miniterm.py
-CROSS_COMPILE ?= aarch64-unknown-elf-
+CROSS_COMPILE ?= aarch64-unknown-linux-gnu-
 PYTHON ?= python2
 BLOCK_DEVICE ?= /dev/null
 FIND ?= find
@@ -15,7 +15,7 @@ UBOOT_BIN = u-boot-sunxi-with-spl.bin
 
 ARCH_TARBALL = ArchLinuxARM-aarch64-latest.tar.gz
 
-UBOOT_VERSION = 2018.09-rc2
+UBOOT_VERSION = 2019.04
 UBOOT_TARBALL = u-boot-v$(UBOOT_VERSION).tar.gz
 UBOOT_DIR = u-boot-$(UBOOT_VERSION)
 
