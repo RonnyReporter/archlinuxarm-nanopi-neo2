@@ -6,7 +6,7 @@ Dependencies
 ============
 
 - `make`
-- `bsdtar` (`libarchive`) -- If you get any errors writing make sure you have version 3.3.x or higher.
+- `bsdtar` (`libarchive`) -- If you get errors writing the image, check if you have v3.3.x or higher.
 - `python2`
 - `uboot-tools`
 - `sudo`
@@ -49,8 +49,7 @@ Building and installing the distribution
 
 Run `PATH=$PATH:/home/your-home-directory/x-tools/aarch64-unknown-linux-gnu/bin make` to build, be sure to edit your-home-directory.
 
-Then run `make install BLOCK_DEVICE=/dev/mmcblk0` with the appropriate value for
-`BLOCK_DEVICE`.
+Then run `make install BLOCK_DEVICE=/dev/mmcblk0` with the appropriate target, either sd card or loop device.
 
 After first boot
 ===============
