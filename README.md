@@ -6,7 +6,7 @@ Dependencies
 ============
 
 - `make`
-- `bsdtar` (`libarchive`) -- If you get any errors writing make sure you have version 3.3.x or higher installed/compiled.
+- `bsdtar` (`libarchive`) -- If you get any errors writing make sure you have version 3.3.x or higher.
 - `python2`
 - `uboot-tools`
 - `sudo`
