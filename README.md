@@ -6,7 +6,7 @@ Dependencies
 ============
 
 - `make`
-- `bsdtar` (`libarchive`) -- Might hev to compile from source if oyu get any errors, needs at least version 3.3.x
+- `bsdtar` (`libarchive`) -- Compile from source if you get any errors writing the image to sdcard or image, needs at least version 3.3.x
 - `python2`
 - `uboot-tools`
 - `sudo`
