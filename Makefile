@@ -6,8 +6,8 @@ PYTHON ?= python2
 BLOCK_DEVICE ?= /dev/null
 FIND ?= find
 
-TRUSTED_FIRMWARE_TARBALL = v2.1.zip
-TRUSTED_FIRMWARE_DIR = arm-trusted-firmware-2.1
+TRUSTED_FIRMWARE_TARBALL = master.zip
+TRUSTED_FIRMWARE_DIR = arm-trusted-firmware-master
 TRUSTED_FIRMWARE_BIN = bl31.bin
 
 UBOOT_SCRIPT = boot.scr
