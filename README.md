@@ -5,6 +5,7 @@ board.
 Dependencies
 ============
 
+- `Debian/Ubuntu based distro`
 - `make`
 - `bsdtar` (`libarchive`) -- If you get errors writing the image, check if you have v3.3.x or higher.
 - `python2`
@@ -22,20 +23,6 @@ Here is a simple way to get one:
 
     apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
 
-Or:
-
-    git clone https://github.com/crosstool-ng/crosstool-ng
-    cd crosstool-ng
-    ./bootstrap
-    ./configure --enable-local
-    make
-    ./ct-ng aarch64-unknown-linux-gnu
-    ./ct-ng build
-    ./ct-ng build install
-    
-This will install in ~/x-tools, make sure you have the `bin` directory in your path, see below.
-
-
 Preparing the files
 ===================
 
@@ -51,7 +38,7 @@ This will provide:
 Building and installing the distribution
 ========================================
 
-Run `PATH=$PATH:/home/your-home-directory/x-tools/aarch64-unknown-linux-gnu/bin make` to build, be sure to edit your-home-directory.
+Run `make` to build, be sure to edit your-home-directory.
 
 Then run `make install BLOCK_DEVICE=/dev/mmcblk0` with the appropriate target, either sd card or loop device.
 
@@ -71,10 +58,3 @@ Goodies
 
 If you have a serial cable and `miniterm.py` installed (`python-pyserial`),
 `make serial` will open a session with the appropriate settings.
-
-
-TODO
-====
-
-- clarify crosstool-ng process
-- upstream to ArchLinuxARM
