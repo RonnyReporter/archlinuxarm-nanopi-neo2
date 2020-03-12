@@ -13,7 +13,6 @@ Dependencies
 - `sudo`
 - `fdisk`
 
-
 Prerequisite
 ============
 
@@ -31,14 +30,8 @@ Run `make` (specifying jobs with `-jX` is supported and recommended).
 This will provide:
 
 - the ArchLinuxARM aarch64 default rootfs (`ArchLinuxARM-aarch64-latest.tar.gz`)
-- an u-boot image compiled for the NanoPi Neo2 (`u-boot-sunxi-with-spl.bin`)
+- a uboot image compiled for the NanoPi Neo2 (`u-boot-sunxi-with-spl.bin`)
 - a boot script (`boot.scr`) to be copied in `/boot`
-
-
-Building and installing the distribution
-========================================
-
-Run `make` to build, be sure to edit your-home-directory.
 
 Then run `make install BLOCK_DEVICE=/dev/mmcblk0` with the appropriate target, either sd card or loop device.
 
