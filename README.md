@@ -20,6 +20,10 @@ In order to build the image, you need a working ARM toolchain.
 
 Here is a simple way to get one:
 
+    apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
+
+Or:
+
     git clone https://github.com/crosstool-ng/crosstool-ng
     cd crosstool-ng
     ./bootstrap
