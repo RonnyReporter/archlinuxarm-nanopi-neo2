@@ -1,6 +1,7 @@
 This repository can be used to create an ArchLinuxARM image for the NanoPi Neo2
 board.
 
+Ready made images can be found here: https://github.com/RonnyReporter/nanopi-neo2-arch/releases
 
 Dependencies
 ============
